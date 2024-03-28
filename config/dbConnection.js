@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-CONNECTION_STRING = "mongodb+srv://admin:admin@zaryabnode.vfkes94.mongodb.net/backendcontacts?retryWrites=true&w=majority"
-
+CONNECTION_STRING = process.env.CONNECTION_STRING;
 const connectDb = async () =>{
     try{
         const connect = await mongoose.connect(CONNECTION_STRING);
